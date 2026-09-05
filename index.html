@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoDark — Privacy-first apps that never phone home</title>
+<meta name="description" content="GoDark builds apps that run entirely on your device. No cloud, no tracking, no data leaving your hands.">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-alt: #111111;
+    --fg: #e8e8e8;
+    --fg-dim: #9a9a9a;
+    --accent: #39ff8a;
+    --border: #232323;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+    color: var(--fg);
+  }
+
+  .logo span { color: var(--accent); }
+
+  nav a {
+    color: var(--fg-dim);
+    font-size: 0.95rem;
+    margin-left: 24px;
+  }
+
+  main {
+    padding: 90px 0 100px;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.15;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .lede {
+    font-size: 1.15rem;
+    color: var(--fg-dim);
+    max-width: 560px;
+    margin: 0 0 40px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #06130a;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .btn:hover {
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(57, 255, 138, 0.15);
+  }
+
+  section.features {
+    border-top: 1px solid var(--border);
+    padding: 70px 0;
+  }
+
+  .features h2 {
+    font-size: 1.6rem;
+    margin: 0 0 40px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  @media (max-width: 680px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+
+  .card .icon {
+    margin-bottom: 16px;
+    color: var(--accent);
+    display: flex;
+    justify-content: center;
+  }
+
+  .card .icon svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
+
+  .card h3 {
+    font-size: 1.05rem;
+    margin: 0 0 8px;
+  }
+
+  .card p {
+    color: var(--fg-dim);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  section.cta {
+    border-top: 1px solid var(--border);
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  section.cta h2 {
+    font-size: 1.8rem;
+    margin: 0 0 12px;
+  }
+
+  section.cta p {
+    color: var(--fg-dim);
+    margin: 0 0 32px;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 0;
+    color: var(--fg-dim);
+    font-size: 0.9rem;
+  }
+
+  footer .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">Go<span>Dark</span></div>
+    <nav>
+      <a href="#features">Why GoDark</a>
+      <a href="mailto:contact@godark.nz">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="eyebrow">On-device by default.</div>
+    <h1>Apps that keep your data<br>exactly where it belongs — with you.</h1>
+    <p class="lede">
+      GoDark builds software that runs entirely on your device, with no
+      accounts, no analytics, and no GoDark servers. If you want your data
+      on multiple devices, you can opt in to iCloud sync — off by default,
+      always your choice, and it never touches our infrastructure.
+    </p>
+    <a class="btn" href="mailto:contact@godark.nz">Contact us</a>
+  </div>
+</main>
+
+<section class="features" id="features">
+  <div class="wrap">
+    <h2>Built differently, on purpose</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3.51472 2.10051L22.6066 21.1924L21.1924 22.6066L19.1782 20.5924C18.503 20.8556 17.7684 21 17 21H7C3.68629 21 1 18.3137 1 15C1 12.3846 2.67346 10.16 5.00804 9.33857C5.0027 9.22639 5 9.11351 5 9C5 8.22228 5.12683 7.47418 5.36094 6.77527L2.10051 3.51472L3.51472 2.10051ZM7 9C7 9.08147 7.00193 9.16263 7.00578 9.24344L7.07662 10.7309L5.67183 11.2252C4.0844 11.7837 3 13.2889 3 15C3 17.2091 4.79086 19 7 19H17C17.1858 19 17.3687 18.9873 17.5478 18.9628L7.03043 8.44519C7.01032 8.62736 7 8.81247 7 9ZM12 2C15.866 2 19 5.13401 19 9C19 9.11351 18.9973 9.22639 18.992 9.33857C21.3265 10.16 23 12.3846 23 15C23 16.0883 22.7103 17.1089 22.2037 17.9889L20.7111 16.4955C20.8974 16.0335 21 15.5287 21 15C21 12.79 19.21 11 17 11C16.4711 11 15.9661 11.1027 15.5039 11.2892L14.0111 9.7964C14.8912 9.28978 15.9118 9 17 9C17 6.23858 14.7614 4 12 4C10.9295 4 9.93766 4.33639 9.12428 4.90922L7.69418 3.48056C8.88169 2.55284 10.3763 2 12 2Z"></path></svg></div>
+        <h3>No GoDark servers</h3>
+        <p>Everything runs locally by default. If you enable iCloud sync, your data goes directly through Apple's own encrypted infrastructure — it never passes through us.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.0361 16.3789L19.9141 18.5L22.0361 20.6221L20.6221 22.0361L18.5 19.9141L16.3789 22.0361L14.9648 20.6221L17.0859 18.5L14.9648 16.3789L16.3789 14.9648L18.5 17.0859L20.6221 14.9648L22.0361 16.3789ZM12.4785 2.01172C17.7796 2.26189 22 6.63756 22 12V13H10.0332C10.1896 15.5386 10.9356 17.9153 12.1387 19.9961C12.2207 19.9947 12.3024 19.995 12.3838 19.9912C12.5538 19.9832 12.7227 19.9696 12.8896 19.9512L13.1104 21.9395C12.9017 21.9625 12.6907 21.9783 12.4785 21.9883C12.3199 21.9958 12.1603 22 12 22C11.8397 22 11.6801 21.9958 11.5215 21.9883C6.22043 21.7381 2 17.3624 2 12C2 6.63756 6.22043 2.26189 11.5215 2.01172C11.6801 2.00424 11.8397 2 12 2C12.1603 2 12.3199 2.00424 12.4785 2.01172ZM4.06445 13C4.46083 16.1773 6.71821 18.7761 9.71289 19.668C8.74978 17.6256 8.16038 15.3738 8.03027 13H4.06445ZM9.71289 4.33105C6.71807 5.22285 4.46084 7.82258 4.06445 11H8.03027C8.1604 8.62585 8.74956 6.3736 9.71289 4.33105ZM12 4.25195C10.8789 6.27297 10.1835 8.56136 10.0332 11H13.9668C13.8165 8.56136 13.1211 6.27297 12 4.25195ZM14.2861 4.33105C15.2496 6.3737 15.8396 8.6257 15.9697 11H19.9355C19.5391 7.82226 17.2814 5.2226 14.2861 4.33105Z"></path></svg></div>
+        <h3>Offline by default</h3>
+        <p>Out of the box, our apps need no internet connection at all. Sync is an opt-in extra, not a requirement.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.8827 19.2968C16.1814 20.3755 14.1638 21.0002 12.0003 21.0002C6.60812 21.0002 2.12215 17.1204 1.18164 12.0002C1.61832 9.62282 2.81932 7.5129 4.52047 5.93457L1.39366 2.80777L2.80788 1.39355L22.6069 21.1925L21.1927 22.6068L17.8827 19.2968ZM5.9356 7.3497C4.60673 8.56015 3.6378 10.1672 3.22278 12.0002C4.14022 16.0521 7.7646 19.0002 12.0003 19.0002C13.5997 19.0002 15.112 18.5798 16.4243 17.8384L14.396 15.8101C13.7023 16.2472 12.8808 16.5002 12.0003 16.5002C9.51498 16.5002 7.50026 14.4854 7.50026 12.0002C7.50026 11.1196 7.75317 10.2981 8.19031 9.60442L5.9356 7.3497ZM12.9139 14.328L9.67246 11.0866C9.5613 11.3696 9.50026 11.6777 9.50026 12.0002C9.50026 13.3809 10.6196 14.5002 12.0003 14.5002C12.3227 14.5002 12.6309 14.4391 12.9139 14.328ZM20.8068 16.5925L19.376 15.1617C20.0319 14.2268 20.5154 13.1586 20.7777 12.0002C19.8603 7.94818 16.2359 5.00016 12.0003 5.00016C11.1544 5.00016 10.3329 5.11773 9.55249 5.33818L7.97446 3.76015C9.22127 3.26959 10.5793 3.00016 12.0003 3.00016C17.3924 3.00016 21.8784 6.87992 22.8189 12.0002C22.5067 13.6998 21.8038 15.2628 20.8068 16.5925ZM11.7229 7.50857C11.8146 7.50299 11.9071 7.50016 12.0003 7.50016C14.4855 7.50016 16.5003 9.51488 16.5003 12.0002C16.5003 12.0933 16.4974 12.1858 16.4919 12.2775L11.7229 7.50857Z"></path></svg></div>
+        <h3>Zero tracking</h3>
+        <p>No analytics, no telemetry, no third-party SDKs quietly collecting your behaviour.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Have a question or idea?</h2>
+    <p>We'd love to hear from you.</p>
+    <a class="btn" href="mailto:contact@godark.nz">contact@godark.nz</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 GoDark</span>
+    <span>Privacy by design, not by promise.</span>
+  </div>
+</footer>
+
+</body>
+</html>
